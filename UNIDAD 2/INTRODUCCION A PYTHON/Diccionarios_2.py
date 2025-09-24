@@ -28,6 +28,6 @@ biblioteca = {
     }
 }
 
-isbn = "978-84-376-5678-9"   # Puedes cambiar este ISBN para probar otro
+isbn = "978-84-376-5678-9" 
 info_libro = biblioteca.get(isbn)          
 print("\nInformación del libro:", info_libro)
