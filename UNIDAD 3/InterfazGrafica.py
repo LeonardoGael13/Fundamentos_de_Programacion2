@@ -1,5 +1,5 @@
 import sys
-from PySide6.QtWidgets import QApplication QWidget QVBoxLayout QPushButton QTextEdit QLineEdit QLabel
+from PySide6.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QTextEdit, QLineEdit, QLabel
 from sdkFP.Guardar import Guardar
 from sdkFP.Consultar import Consultar
 
@@ -39,7 +39,7 @@ class App(QWidget):
     def accion_agregar_libro(self):
         titulo = self.titulo.text()
         autor = self.autor.text()
-        mensaje = self.guardar.agregar(titulo, autor)
+        mensaje = self.guardar.guardar_libro(titulo, autor)
         self.resultado.setText(mensaje)
 
     def accion_consultar_libros(self):
@@ -54,3 +54,16 @@ if __name__ == "__main__":
     ventana = App()
     ventana.show()
     sys.exit(app.exec())
+
+
+'''
+¿Que propiedades de la programacion orientada a objeto indentificada?
+
+Encapsulamiento: Agrupa datos y funciones que los manipulan dentro de una clase.
+
+Herencia: Permite que una clase tome características de otra.
+
+Polimorfismo: Un mismo método puede comportarse diferente según el objeto.
+
+Abstracción: Ocultar los detalles internos y mostrar solo lo necesario.
+'''
